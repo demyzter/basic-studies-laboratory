@@ -1,7 +1,15 @@
-import requests
+def calcular_media(nota1, nota2):
+    media = (nota1 + nota2) / 2
 
-# Download a web page
-response = requests.get("https://api.github.com")
-print(response.status_code)  # Should print 200
+    if media >= 7:
+        print("Aprovado")
+    else:
+        print("Reprovado")
 
-print("Hello, world!")
+    return media
+
+
+resultado = calcular_media(8, 6)
+
+print(resultado)
+
