@@ -1,15 +1,12 @@
-def calcular_media(nota1, nota2):
-    media = (nota1 + nota2) / 2
+from dotenv import load_dotenv
+import os
 
-    if media >= 7:
-        print("Aprovado")
-    else:
-        print("Reprovado")
+# Load the .env file
+load_dotenv()
 
-    return media
+# Now use your variables
+api_key = os.environ.get('API_KEY')
+debug = os.environ.get('DEBUG')
 
-
-resultado = calcular_media(8, 6)
-
-print(resultado)
-
+print(f"API Key: {api_key}")
+print(f"Debug mode: {debug}")
